@@ -6,7 +6,7 @@ namespace JewelCreator.Commands
 {
     internal class JewelCreatorCommands
     {
-        [Command("jewelcreator", shortHand: "jc", usage: ".jewelcreator ?", description: "Jewel creator.", adminOnly: false)]
+        [Command("jewelcreator", shortHand: "jc", usage: ".jewelcreator ?", description: "Jewel creator.", adminOnly: true)]
         public static void JewelCreatorCommand(ChatCommandContext ctx, string arg1 = "", string arg2 = "")
         {
             if (DB.EnebledCommand)
@@ -54,6 +54,7 @@ namespace JewelCreator.Commands
                         for (int i = 1; i <= Mods.Count; i++)
                         {
                             sb.AppendLine($"{i}. {Mods[$"{i}"].Description}");
+                            if (sb.Length > 450) { ctx.Reply(sb.ToString()); sb.Clear(); sb.AppendLine(""); }
                         }
                         ctx.Reply(sb.ToString());
                         return;

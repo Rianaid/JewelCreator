@@ -1,6 +1,6 @@
 {
   "name": "JewelCreator",
-  "version_number": "0.1.0",
+  "version_number": "0.1.1",
   "website_url": "https://github.com/Rianaid/JewelCreator",
   "description": "Server side only mod that allows you to create your own jewels with your chosen skill and skill modifier.",
   "dependencies": [

@@ -342,7 +342,7 @@ namespace JewelCreator.Database
             VeilOfBonesMods.TryAdd("1", new CreateJevelLegendStruct("SpellMod_VeilOfBones_BonusDamageBelowTreshhold", SkillPower, "Increases damage done to targets below critical health by (25-40)%."));
             VeilOfBonesMods.TryAdd("2", new CreateJevelLegendStruct("SpellMod_VeilOfBones_DashHealMinions", SkillPower, "Heals all allied skeletons you dash through by (58-80)% oftheir maximum health and reset their lifetime."));
             VeilOfBonesMods.TryAdd("3", new CreateJevelLegendStruct("SpellMod_VeilOfBones_DashInflictCondemn", SkillPower, "Dashing through an enemy inflicts Condemn."));
-            VeilOfBonesMods.TryAdd("4", new CreateJevelLegendStruct("SpellMod_VeilOfBones_SpawnSkeleton", SkillPower, "Striking an enemy summons 1 skeleton warrior."));
+            VeilOfBonesMods.TryAdd("4", new CreateJevelLegendStruct("SpellMod_VeilOfBones_SpawnSkeletonMage", SkillPower, "Striking an enemy summons a Skeleton Mage instead of Skeleton Warrior."));
             VeilOfBonesMods.TryAdd("5", new CreateJevelLegendStruct("SpellMod_Shared_Veil_BonusDamageOnPrimary", SkillPower, "Increases damage of next primary attack by (14-25)%."));
             VeilOfBonesMods.TryAdd("6", new CreateJevelLegendStruct("SpellMod_Shared_Veil_BuffAndIllusionDuration", SkillPower, "Increases elude duration by (13-20)%."));
         }
