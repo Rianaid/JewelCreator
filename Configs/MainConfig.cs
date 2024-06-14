@@ -17,8 +17,8 @@ namespace JewelCreator.Configs
 
         public static void SettingsInit()
         {
-            EnableCommand = Conf.Bind("JewelCreator", "Enabled", true, "Enable command \"JewelCreator\". only for Admins");
-            AdminOnlyCommand = Conf.Bind("JewelCreator", "AdminOnly", true, "Enable command \"JewelCreator\".");
+            EnableCommand = Conf.Bind("JewelCreator", "Enabled", true, "Enable command \"JewelCreator\".");
+            AdminOnlyCommand = Conf.Bind("JewelCreator", "AdminOnly", true, "Enable command \"JewelCreator\". only for Admins");
             TierLevel = Conf.Bind("JewelCreator", "TierLevel", 4, "Setup (1-4) tier of jewels.");
             SkillModPower = Conf.Bind("JewelCreator", "SkillModPower", 1f, "Setup (0.0 - 1.0) jewels skill modification power.");
             SettingsBind();
