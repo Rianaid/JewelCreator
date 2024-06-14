@@ -6,7 +6,7 @@ namespace JewelCreator.Commands
 {
     internal class JewelCreatorCommands
     {
-        [Command("jewelcreator", shortHand: "jc", usage: ".jewelcreator ?", description: "Jewel creator.", adminOnly: true)]
+        [Command("jewelcreator", shortHand: "jc", usage: ".jewelcreator ?", description: "Jewel creator.", adminOnly: false)]
         public static void JewelCreatorCommand(ChatCommandContext ctx, string arg1 = "", string arg2 = "")
         {
             bool isAdmin = ctx.Event.User.IsAdmin;
