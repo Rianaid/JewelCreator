@@ -4,6 +4,9 @@
 <details>
 <summary>Changelog</summary>
 
+0.1.2
+- Added admin only use configuration
+
 0.1.1
 - FIx internal error.
 
@@ -28,6 +31,11 @@ Mod have only 1 command: `.jewelcreator [SkillName] [Mods]`
 [JewelCreator]
 
 ## Enable command "JewelCreator".
+# Setting type: Boolean
+# Default value: true
+Enabled = true
+
+## Enable command "JewelCreator" only to Admins.
 # Setting type: Boolean
 # Default value: true
 Enabled = true

@@ -8,7 +8,8 @@ namespace JewelCreator.Database
     {
         public static float SkillPower = 0;
         public static int JewelTier = 0;
-        public static bool EnebledCommand = false;
+        public static bool EnabledCommand = false;
+        public static bool AdminOnlyCommand = false;
         public static ConcurrentDictionary<string, ConcurrentDictionary<string, CreateJevelLegendStruct>> SkillModList = new ConcurrentDictionary<string, ConcurrentDictionary<string, CreateJevelLegendStruct>>();
         public static ImmutableDictionary<string, List<string>> SkillClass = ImmutableDictionary.Create<string, List<string>>()
             .Add("blood", new List<string> { "bloodfountain", "bloodrage", "bloodrite", "sanguinecoil", "shadowbolt", "veilofblood" })
