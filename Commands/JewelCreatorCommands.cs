@@ -6,10 +6,16 @@ namespace JewelCreator.Commands
 {
     internal class JewelCreatorCommands
     {
-        [Command("jewelcreator", shortHand: "jc", usage: ".jewelcreator ?", description: "Jewel creator.", adminOnly: true)]
+        [Command("jewelcreator", shortHand: "jc", usage: ".jewelcreator ?", description: "Jewel creator.", adminOnly: false)]
         public static void JewelCreatorCommand(ChatCommandContext ctx, string arg1 = "", string arg2 = "")
         {
-            if (DB.EnebledCommand)
+            bool isAdmin = ctx.Event.User.IsAdmin;
+            if (!isAdmin && DB.AdminOnlyCommand)
+            {
+                ctx.Reply($"<color=red>[denied]</color> {MyPluginInfo.PLUGIN_GUID}");
+                return;
+            }
+            if (DB.EnabledCommand)
             {
                 var SteamID = ctx.User.PlatformId;
                 var sb = new Il2CppSystem.Text.StringBuilder();
@@ -73,7 +79,7 @@ namespace JewelCreator.Commands
                                 mods[i] = "0";
                             }
                         }
-                        bool havedublicat = false;
+                        bool haveDuplicate = false;
                         for (int i = 0; i < 4; i++)
                         {
                             for (int j = 0; j < 4; j++)
@@ -84,14 +90,14 @@ namespace JewelCreator.Commands
                                     {
                                         if (mods[i] != "0")
                                         {
-                                            havedublicat = true;
+                                            haveDuplicate = true;
                                         }
                                     }
                                 }
                             }
                         }
                         bool canCreate = true;
-                        if (!havedublicat)
+                        if (!haveDuplicate)
                         {
                             foreach (var arg in mods)
                             {
@@ -114,7 +120,7 @@ namespace JewelCreator.Commands
                         }
                         else
                         {
-                            ctx.Reply("Modifications can't be dublicated!");
+                            ctx.Reply("Modifications can't be duplicated!");
                             return;
                         }
                     }else if (arg2.Length > 4)
@@ -130,13 +136,13 @@ namespace JewelCreator.Commands
                 }
                 else
                 {
-                    ctx.Reply("Not found abbility.");
+                    ctx.Reply("Not found ability.");
                     return;
                 }
             }
             else
             {
-                ctx.Reply("This command disabled.");
+                ctx.Reply("This command is disabled.");
                 return;
             }
         }
