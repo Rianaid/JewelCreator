@@ -3,7 +3,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>JewelCreator</AssemblyName>
     <Description>Jewel Creator.</Description>
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RootNamespace>JewelCreator</RootNamespace>
@@ -22,12 +22,12 @@
   </ItemGroup>
   <Target Name="CopyDLLs" AfterTargets="Build">
     <Message Text="DLL to V Rising Server" Importance="High" />
-    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll" DestinationFolder="C:\Program Files (x86)\Steam\steamapps\common\VRisingDedicatedServer\BepInEx\plugins" />
+    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll" DestinationFolder="E:\SteamLibrary\steamapps\common\VRisingDedicatedServer\BepInEx\plugins" />
     <Message Text="DLL to Thunderstore pack" Importance="High" />
-    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll" DestinationFolder="D:\vrising_mods\Thunderstore\$(ProjectName)\$(Version)" />
-    <Copy SourceFiles="icon.png" DestinationFolder="D:\vrising_mods\Thunderstore\$(ProjectName)\$(Version)" />
-    <Copy SourceFiles="manifest.json" DestinationFolder="D:\vrising_mods\Thunderstore\$(ProjectName)\$(Version)" />
-    <Copy SourceFiles="README.md" DestinationFolder="D:\vrising_mods\Thunderstore\$(ProjectName)\$(Version)" />
+    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll" DestinationFolder="D:\Source\Thunderstore\$(ProjectName)\$(Version)" />
+    <Copy SourceFiles="icon.png" DestinationFolder="D:\Source\Thunderstore\$(ProjectName)\$(Version)" />
+    <Copy SourceFiles="manifest.json" DestinationFolder="D:\Source\Thunderstore\$(ProjectName)\$(Version)" />
+    <Copy SourceFiles="README.md" DestinationFolder="D:\Source\Thunderstore\$(ProjectName)\$(Version)" />
     <Message Text="DLL Copied OK" Importance="High" />
   </Target>
 </Project>

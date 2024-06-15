@@ -5,7 +5,10 @@
 <summary>Changelog</summary>
 
 0.1.2
-- Added admin only use configuration
+
+Thanks [Sens'](https://github.com/pedro-bale/JewelCreator/tree/master) for these changes.
+- Added admin only use configuration. 
+- Fix internal names types.
 
 0.1.1
 - FIx internal error.
@@ -35,10 +38,10 @@ Mod have only 1 command: `.jewelcreator [SkillName] [Mods]`
 # Default value: true
 Enabled = true
 
-## Enable command "JewelCreator" only to Admins.
+## Enable command "JewelCreator". only for Admins
 # Setting type: Boolean
 # Default value: true
-Enabled = true
+AdminOnly = true
 
 ## Setup (1-4) tier of jewels.
 # Setting type: Int32
@@ -49,6 +52,7 @@ TierLevel = 4
 # Setting type: Single
 # Default value: 1
 SkillModPower = 1
+
 ```
 
 ### Credits
